@@ -39,7 +39,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'django_acme_challanger.urls'
+ROOT_URLCONF = 'django_acme_challenger.urls'
 
 TEMPLATES = [
     {
@@ -57,7 +57,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_acme_challanger.wsgi.application'
+WSGI_APPLICATION = 'django_acme_challenger.wsgi.application'
 
 
 # Database
