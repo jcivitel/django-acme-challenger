@@ -1,0 +1,32 @@
+<!-- django_acme_backend/templates/list_domains.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Domain-Liste</title>
+</head>
+<body>
+<h1>Domain-Liste</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Domain-Name</th>
+        <th>Erstellt am</th>
+        <th>Aktualisiert am</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for domain in domains %}
+        <tr>
+            <td>{{ domain.id }}</td>
+            <td>{{ domain.domain_name }}</td>
+            <td>{{ domain.created_at }}</td>
+            <td>{{ domain.updated_at }}</td>
+            <td><a href="{% url "create_challenge" domain.id %}">Create request</a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
