@@ -2,6 +2,7 @@
 from decouple import Csv
 from decouple import config
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_acme_backend',
+    'django_acme_frontend',
 ]
 
 MIDDLEWARE = [
@@ -37,6 +39,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_auto_logout.middleware.auto_logout",
 ]
 
 ROOT_URLCONF = 'django_acme_challenger.urls'
@@ -136,3 +139,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_URL = "login"
+LOGIN_REDIRECT_URL = "dashboard"
+
+AUTO_LOGOUT = {
+    "IDLE_TIME": timedelta(hours=1),
+    "MESSAGE": "Your session has expired. Please log in again",
+    "REDIRECT_TO_LOGIN_IMMEDIATELY": True,
+}

@@ -5,4 +5,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("acme-challenge/", include("django_acme_backend.urls")),
+    path("", include("django_acme_frontend.urls")),
 ]

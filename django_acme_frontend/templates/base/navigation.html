@@ -1,0 +1,21 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <img src="{% static 'img/banner.jpg' %}" alt="banner"
+             class="img-fluid rounded-5 col-1 me-2" width="w-25">
+        <a class="navbar-brand" href="{% url "dashboard" %}"> {{ PROJECT_TITLE }} </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url "dashboard" %}">Dashboard</a>
+                </li>
+            </ul>
+        </div>
+        <button class="navbar-toggler text-bg-light float-end" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-btn btn btn-outline-warning float-end" href="{% url "logout" %}">Logout</a>
+    </div>
+</nav>
