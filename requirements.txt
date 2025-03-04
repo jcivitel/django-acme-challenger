@@ -28,7 +28,6 @@ pyRFC3339==2.0.1
 python-dateutil==2.9.0.post0
 python-digitalocean==1.17.0
 pytz==2025.1
-pywin32==308
 requests==2.32.3
 six==1.17.0
 sqlparse==0.5.3
@@ -40,3 +39,4 @@ wcwidth==0.2.13
 django-redis
 mysqlclient
 django-auto-logout
+python-decouple

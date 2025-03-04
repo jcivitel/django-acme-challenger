@@ -1,0 +1,9 @@
+services:
+  django-acme-challenger:
+    image: jcivitell/django-acme-challenger
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      tags:
+      - "jcivitell/django-acme-challenger:${CIRCLE_TAG:-notag}"
+      
