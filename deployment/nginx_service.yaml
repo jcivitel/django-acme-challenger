@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: acme-challenger-nginx-svc
+spec:
+  ports:
+    - name: acme-challenger-port
+      port: 80
+      protocol: TCP
+      targetPort: http-nginx
+      nodePort: 31010
+  selector:
+    app: acme-challenger-nginx
+  sessionAffinity: None
+  type: NodePort

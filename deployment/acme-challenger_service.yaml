@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: acme-challenger-svc
+spec:
+  ports:
+    - name: acme-challenger-port
+      port: 9125
+      protocol: TCP
+      targetPort: http-acme-challenger
+  selector:
+    app: acme-challenger

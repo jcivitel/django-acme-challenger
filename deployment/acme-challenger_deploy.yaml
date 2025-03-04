@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: acme-challenger
+  name: acme-challenger
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: acme-challenger
+  template:
+    metadata:
+      labels:
+        app: acme-challenger
+    spec:
+      containers:
+        - name: acme-challenger
+          image: jcivitell/django-acme-challenger
+          ports:
+            - containerPort: 9125
+              name: http-acme-challenger
+              protocol: TCP
+          resources:
+            requests:
+              cpu: 250m
+              memory: 750Mi
+          envFrom:
+          - configMapRef: 
+              name: acme-challenger-env
+          - secretRef: 
+              name: acme-challenger-sec      
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: acme-challenger-celerybeat
+  name: acme-challenger-celerybeat
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: acme-challenger-celerybeat
+  template:
+    metadata:
+      labels:
+        app: acme-challenger-celerybeat
+    spec:
+      containers:
+        - name: acme-challenger-celerybeat
+          image: jcivitell/django-acme-challenger-celery
+          envFrom:
+          - configMapRef: 
+              name: acme-challenger-env
+          - secretRef: 
+              name: acme-challenger-sec
