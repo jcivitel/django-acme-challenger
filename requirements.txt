@@ -43,3 +43,4 @@ django-auto-logout
 python-decouple
 whitenoise
 django-cors-headers
+django-xforwardedfor-middleware
