@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_acme_backend',
     'django_acme_frontend',
+    "whitenoise.runserver_nostatic",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -39,11 +41,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "x_forwarded_for.middleware.XForwardedForMiddleware",
+    "django.middleware.gzip.GZipMiddleware",
     "django_auto_logout.middleware.auto_logout",
 ]
 
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+WHITENOISE_USE_FINDERS = True
+WHITENOISE_MANIFEST_STRICT = False
 
 ROOT_URLCONF = 'django_acme_challenger.urls'
 
