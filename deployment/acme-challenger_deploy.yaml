@@ -19,7 +19,7 @@ spec:
         - name: acme-challenger
           image: jcivitell/django-acme-challenger
           ports:
-            - containerPort: 9125
+            - containerPort: 8000
               name: http-acme-chall
               protocol: TCP
           resources:
