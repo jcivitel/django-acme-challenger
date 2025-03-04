@@ -3,7 +3,15 @@ services:
     image: jcivitell/django-acme-challenger
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./docker/Dockerfile-django-acme-challenger
       tags:
       - "jcivitell/django-acme-challenger:${CIRCLE_TAG:-notag}"
+        
+  django-acme-challenger-celery:
+    image: jcivitell/django-acme-challenger-celery
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile-django-acme-challenger-celery
+      tags:
+      - "jcivitell/django-acme-challenger-celery:${CIRCLE_TAG:-notag}"
       
