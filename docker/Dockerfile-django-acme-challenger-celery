@@ -22,4 +22,4 @@ RUN pip install --no-cache-dir -r /opt/django-acme-challenger/requirements.txt
 FROM install
 
 EXPOSE 8000
-CMD ["celery", "-A", "django-acme-challenger", "worker", "--beat", "--loglevel=info" ]
+CMD ["celery", "-A", "django_acme_challenger", "worker", "--beat", "--loglevel=info" ]
