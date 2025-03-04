@@ -41,3 +41,5 @@ django-redis
 mysqlclient
 django-auto-logout
 python-decouple
+whitenoise
+django-cors-headers
