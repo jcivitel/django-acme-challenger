@@ -55,7 +55,7 @@ data:
           listen       80;
           server_name  _;
           location / {
-            uwsgi_pass acme-challenger-svc:9125;
+            uwsgi_pass acme-chall-svc:9125;
             uwsgi_param Host $host;
             uwsgi_param X-Real-IP $remote_addr;
             uwsgi_param X-Forwarded-For $proxy_add_x_forwarded_for;
