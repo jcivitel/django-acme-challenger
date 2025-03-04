@@ -4,7 +4,15 @@
 [![Docker Stars](https://img.shields.io/docker/stars/jcivitell/django-acme-challenger?logo=docker)](https://hub.docker.com/r/jcivitell/django-acme-challenger)
 [![Docker Image Size](https://img.shields.io/docker/image-size/jcivitell/django-acme-challenger/latest?logo=docker)](https://hub.docker.com/r/jcivitell/django-acme-challenger)
 
-# django-acme-challenger
+## Project Overview
+
+This project is a Django-based frontend for managing ACME domains. It provides features for user login, logout, and displaying a list of domains.
+
+## Technologies
+
+- Python
+- Django
+- JavaScript
 
 ## License
 

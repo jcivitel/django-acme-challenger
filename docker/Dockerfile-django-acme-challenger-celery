@@ -1,7 +1,7 @@
 FROM python:3.12-alpine AS builder
 
 RUN apk add --no-cache libgcc mariadb-connector-c pkgconf mariadb-dev \
-    postgresql-dev linux-headers
+    postgresql-dev linux-headers curl
 
 WORKDIR /opt/django-acme-challenger/
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -20,6 +20,8 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install --no-cache-dir -r /opt/django-acme-challenger/requirements.txt
 
 FROM install
+
+RUN chmod +x /opt/django-acme-challenger/django_acme_backend/script.sh
 
 EXPOSE 8000
 CMD ["celery", "-A", "django_acme_challenger", "worker", "--beat", "--loglevel=info" ]
