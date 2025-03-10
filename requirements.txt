@@ -16,7 +16,7 @@ ConfigArgParse==1.7
 configobj==5.0.9
 cryptography==44.0.2
 distro==1.9.0
-Django==5.1.6
+Django==5.1.7
 idna==3.10
 jsonpickle==4.0.2
 kombu==5.4.2
