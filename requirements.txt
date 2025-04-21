@@ -21,7 +21,7 @@ idna==3.10
 jsonpickle==4.0.5
 kombu==5.5.2
 parsedatetime==2.6
-prompt_toolkit==3.0.50
+prompt_toolkit==3.0.51
 pycparser==2.22
 pyOpenSSL==25.0.0
 pyRFC3339==2.0.1
