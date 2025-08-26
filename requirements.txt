@@ -24,7 +24,7 @@ parsedatetime==2.6
 prompt_toolkit==3.0.51
 pycparser==2.22
 pyOpenSSL==25.1.0
-pyRFC3339==2.0.1
+pyRFC3339==2.1.0
 python-dateutil==2.9.0.post0
 python-digitalocean==1.17.0
 pytz==2025.2
