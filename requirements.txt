@@ -23,7 +23,7 @@ kombu==5.5.4
 parsedatetime==2.6
 prompt_toolkit==3.0.52
 pycparser==2.23
-pyOpenSSL==25.2.0
+pyOpenSSL==25.3.0
 pyRFC3339==2.1.0
 python-dateutil==2.9.0.post0
 python-digitalocean==1.17.0
