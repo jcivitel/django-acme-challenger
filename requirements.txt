@@ -19,7 +19,7 @@ distro==1.9.0
 Django==6.0
 idna==3.11
 jsonpickle==4.1.1
-kombu==5.6.1
+kombu==5.6.2
 parsedatetime==2.6
 prompt_toolkit==3.0.52
 pycparser==2.23
