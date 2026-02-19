@@ -1,4 +1,4 @@
-acme==5.3.0
+acme==5.3.1
 amqp==5.3.1
 asgiref==3.11.1
 billiard==4.2.4
