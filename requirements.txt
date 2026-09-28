@@ -33,7 +33,7 @@ six==1.17.0
 sqlparse==0.6.0
 typing_extensions==4.16.0
 tzdata==2026.4
-urllib3==2.7.0
+urllib3==2.8.0
 uwsgi==2.0.31
 vine==5.1.0
 wcwidth==0.8.3
