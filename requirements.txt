@@ -3,7 +3,7 @@ amqp==5.4.2
 asgiref==3.13.0
 billiard==4.3.2
 celery==5.7.0
-certbot==5.8.0
+certbot==5.10.0
 certifi==2026.10.23
 cffi==2.1.1
 charset-normalizer==3.5.2
