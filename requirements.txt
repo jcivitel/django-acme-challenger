@@ -25,7 +25,7 @@ prompt_toolkit==3.0.53
 pycparser==3.12
 pyOpenSSL==26.4.0
 pyRFC3339==2.1.1
-python-dateutil==3.0.0
+python-dateutil==4.0.0
 python-digitalocean==1.17.0
 pytz==2026.6
 requests==2.34.2
